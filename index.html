@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Yu | Personal Website</title>
+  <meta name="description" content="Personal website and portfolio of Kevin Yu.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Kevin<span>.</span>Yu</a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="greeting">Hello, I'm</p>
+          <h1 class="hero-title">Kevin Yu</h1>
+          <p class="hero-subtitle">Software Developer & Tech Enthusiast</p>
+          <p class="hero-description">
+            Welcome to my personal website. I build thoughtful, practical projects and love learning new technologies.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-card">
+          <p>
+            Hi there! I am Kevin. I enjoy solving challenging problems and building software that creates real-world impact.
+          </p>
+          <p>
+            This site is hosted directly on GitHub Pages using standard web technologies. You can easily edit any section by modifying the HTML and CSS files.
+          </p>
+          <div class="quick-facts">
+            <div class="fact-item">
+              <span class="fact-label">Location:</span>
+              <span class="fact-value">New York, USA</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">GitHub:</span>
+              <span class="fact-value"><a href="https://github.com/machinsane" target="_blank" rel="noopener noreferrer">@machinsane</a></span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Email:</span>
+              <span class="fact-value"><a href="mailto:doremifayu1030@gmail.com">doremifayu1030@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="section bg-alt">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A collection of things I've built and experimented with.</p>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Web Development</span>
+              </div>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                A clean, responsive personal website built from scratch with semantic HTML5, modern CSS3, and JavaScript, hosted on GitHub Pages.
+              </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/machinsane/machinsane.github.io" class="project-link" target="_blank" rel="noopener noreferrer">Source Code &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Featured Project</span>
+              </div>
+              <h3 class="project-title">Project Title Two</h3>
+              <p class="project-description">
+                Description of your second project. Replace this placeholder with details about your tools, problems solved, and achievements.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>API</span>
+                <span>Automation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/machinsane" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-tag">Open Source</span>
+              </div>
+              <h3 class="project-title">Project Title Three</h3>
+              <p class="project-description">
+                Description of your third project. Highlight the key technologies and what you learned while building it.
+              </p>
+              <div class="project-tags">
+                <span>Tools</span>
+                <span>Data</span>
+                <span>Scripts</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/machinsane" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">Languages, tools, and technical areas I work with.</p>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-chips">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>HTML5 / CSS3</span>
+              <span>SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-chips">
+              <span>Git & GitHub</span>
+              <span>GitHub Pages</span>
+              <span>VS Code</span>
+              <span>Terminal / Bash</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Core Concepts</h3>
+            <div class="skill-chips">
+              <span>Web Development</span>
+              <span>Data Analysis</span>
+              <span>Responsive Design</span>
+              <span>Version Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="section bg-alt">
+      <div class="container contact-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations, questions, or just to say hi!</p>
+
+        <div class="contact-card">
+          <div class="contact-links">
+            <a href="mailto:doremifayu1030@gmail.com" class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <span class="contact-text">doremifayu1030@gmail.com</span>
+            </a>
+            <a href="https://github.com/machinsane" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon">🐙</span>
+              <span class="contact-text">github.com/machinsane</span>
+            </a>
+          </div>
+          <a href="mailto:doremifayu1030@gmail.com" class="btn btn-primary" style="margin-top: 1.5rem;">Send an Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="currentYear"></span> Kevin Yu. All rights reserved.</p>
+      <p class="footer-subtext">Hosted on GitHub Pages &bull; Built with HTML, CSS, and JS</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
