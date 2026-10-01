@@ -10,3 +10,11 @@ const BLOG_POSTS = [
     file: "posts/welcome.md"
   }
 ];
+
+{
+  slug: "巴别塔圣歌",
+  title: "巴别塔圣歌",
+  date: "2026年10月1日",
+  excerpt: "。",
+  file: "posts/巴别塔圣歌.md"
+}；
