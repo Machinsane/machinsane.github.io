@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header: Top bar with site name and Dark/Light Mode switch -->
+  <!-- Header: Top bar with site name, navigation, and theme switch -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="logo">Zhifei<span>.</span>Yu</a>
       <div class="header-actions">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+        </nav>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="theme-icon" id="themeIcon">🌙</span>
         </button>
@@ -27,6 +31,10 @@
         <h1 class="hero-title">Zhifei Yu</h1>
         <p class="hero-subtitle">A current graduate student in Stony Brook University Economics Department</p>
         
+        <div class="profile-actions">
+          <a href="blog.html" class="btn btn-primary">Read My Blog &rarr;</a>
+        </div>
+
         <div class="contact-links">
           <a href="mailto:doremifayu1030@gmail.com" class="contact-item">
             <span class="contact-icon">✉️</span>

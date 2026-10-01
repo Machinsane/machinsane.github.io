@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Zhifei Yu</title>
+  <meta name="description" content="Blog and articles by Zhifei Yu.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header: Top bar with site name, navigation, and theme switch -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Zhifei<span>.</span>Yu</a>
+      <div class="header-actions">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Listing -->
+  <main class="main-content blog-main">
+    <div class="container">
+      <header class="page-header">
+        <h1 class="page-title">Blog</h1>
+        <p class="page-subtitle">Articles, research notes, and reflections written in Obsidian.</p>
+      </header>
+
+      <div class="posts-list" id="postsContainer">
+        <!-- Rendered dynamically by script below -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="currentYear"></span> Zhifei Yu. All rights reserved.</p>
+      <p class="footer-subtext">Hosted on GitHub Pages &bull; Written in Obsidian</p>
+    </div>
+  </footer>
+
+  <script src="posts/posts-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Render posts from posts-data.js
+    const container = document.getElementById("postsContainer");
+    if (typeof BLOG_POSTS !== "undefined" && BLOG_POSTS.length > 0) {
+      container.innerHTML = BLOG_POSTS.map(post => `
+        <article class="blog-card">
+          <div class="blog-card-meta">
+            <time>${post.date}</time>
+          </div>
+          <h2 class="blog-card-title">
+            <a href="post.html?post=${post.slug}">${post.title}</a>
+          </h2>
+          <p class="blog-card-excerpt">${post.excerpt}</p>
+          <a href="post.html?post=${post.slug}" class="read-more-link">Read article &rarr;</a>
+        </article>
+      `).join("");
+    } else {
+      container.innerHTML = "<p>No posts published yet.</p>";
+    }
+  </script>
+</body>
+</html>

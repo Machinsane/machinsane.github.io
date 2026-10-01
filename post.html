@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article | Zhifei Yu</title>
+  <meta name="description" content="Blog article by Zhifei Yu.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Lightweight Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <!-- Header: Top bar with site name, navigation, and theme switch -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Zhifei<span>.</span>Yu</a>
+      <div class="header-actions">
+        <nav class="site-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Container -->
+  <main class="main-content article-main">
+    <div class="container article-container">
+      <div class="back-nav">
+        <a href="blog.html" class="back-link">&larr; Back to all posts</a>
+      </div>
+
+      <article id="articleContent" class="article-body">
+        <div class="loading-spinner">Loading article...</div>
+      </article>
+
+      <div class="article-footer-nav">
+        <a href="blog.html" class="btn btn-secondary">&larr; Back to Blog</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="currentYear"></span> Zhifei Yu. All rights reserved.</p>
+      <p class="footer-subtext">Hosted on GitHub Pages &bull; Written in Obsidian</p>
+    </div>
+  </footer>
+
+  <script src="posts/posts-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Fetch and render markdown post
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get("post") || "welcome";
+      const targetPost = (typeof BLOG_POSTS !== "undefined")
+        ? BLOG_POSTS.find(p => p.slug === slug)
+        : null;
+
+      const filePath = targetPost ? targetPost.file : `posts/${slug}.md`;
+      const articleEl = document.getElementById("articleContent");
+
+      if (targetPost) {
+        document.title = `${targetPost.title} | Zhifei Yu`;
+      }
+
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Article not found (${response.status})`);
+          }
+          return response.text();
+        })
+        .then(markdown => {
+          if (typeof marked !== "undefined") {
+            articleEl.innerHTML = marked.parse(markdown);
+          } else {
+            articleEl.textContent = markdown;
+          }
+        })
+        .catch(err => {
+          articleEl.innerHTML = `
+            <div class="article-error">
+              <h2>Article Not Found</h2>
+              <p>Could not load the article file at <code>${filePath}</code>.</p>
+              <p><a href="blog.html">&larr; Return to blog listing</a></p>
+            </div>
+          `;
+        });
+    });
+  </script>
+</body>
+</html>
