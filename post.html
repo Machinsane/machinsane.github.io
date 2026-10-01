@@ -69,7 +69,7 @@
         document.title = `${targetPost.title} | Zhifei Yu`;
       }
 
-      fetch(filePath)
+      fetch(encodeURI(filePath))
         .then(response => {
           if (!response.ok) {
             throw new Error(`Article not found (${response.status})`);

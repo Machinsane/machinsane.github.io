@@ -1,7 +1,14 @@
 // Blog Posts Registry
 // When you write a new post in Obsidian (e.g. "my-post.md"),
-// add an entry to the top of this list so it appears on your blog page.
+// add an entry to the top of this list inside the square brackets [ ... ].
 const BLOG_POSTS = [
+  {
+    slug: "chants-of-sennaar",
+    title: "巴别塔圣歌",
+    date: "2026年10月1日",
+    excerpt: "这个游戏真的超级好玩！你是一个红衣小人，在神秘古塔中通过对话与符号线索破译居民的语言、解开谜题前往更高处……",
+    file: "posts/巴别塔圣歌.md"
+  },
   {
     slug: "welcome",
     title: "Welcome to My Blog",
@@ -10,11 +17,3 @@ const BLOG_POSTS = [
     file: "posts/welcome.md"
   }
 ];
-
-{
-  slug: "巴别塔圣歌",
-  title: "巴别塔圣歌",
-  date: "2026年10月1日",
-  excerpt: "。",
-  file: "posts/巴别塔圣歌.md"
-}；

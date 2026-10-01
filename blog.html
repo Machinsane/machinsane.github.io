@@ -58,10 +58,10 @@
             <time>${post.date}</time>
           </div>
           <h2 class="blog-card-title">
-            <a href="post.html?post=${post.slug}">${post.title}</a>
+            <a href="post.html?post=${encodeURIComponent(post.slug)}">${post.title}</a>
           </h2>
           <p class="blog-card-excerpt">${post.excerpt}</p>
-          <a href="post.html?post=${post.slug}" class="read-more-link">Read article &rarr;</a>
+          <a href="post.html?post=${encodeURIComponent(post.slug)}" class="read-more-link">Read article &rarr;</a>
         </article>
       `).join("");
     } else {
