@@ -3,6 +3,13 @@
 // add an entry to the top of this list inside the square brackets [ ... ].
 const BLOG_POSTS = [
   {
+    slug: "CBTI",
+    title: "Cognitive Behavioral Therapy for Insomnia",
+    date: "October 14, 2026",
+    excerpt: "I have sleep problem recently, so I tend to try CBTI myself to see if it works",
+    file: "posts/CBIT.md"
+  },
+  {
     slug: "chants-of-sennaar",
     title: "巴别塔圣歌",
     date: "2026年10月1日",
