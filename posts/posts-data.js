@@ -7,7 +7,7 @@ const BLOG_POSTS = [
     title: "Cognitive Behavioral Therapy for Insomnia",
     date: "October 14, 2026",
     excerpt: "I have sleep problem recently, so I tend to try CBTI myself to see if it works",
-    file: "posts/CBIT.md"
+    file: "posts/CBTI.md"
   },
   {
     slug: "chants-of-sennaar",
