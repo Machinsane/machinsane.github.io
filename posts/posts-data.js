@@ -22,5 +22,5 @@ const BLOG_POSTS = [
     date: "October 1, 2026",
     excerpt: "An introduction to my personal blog, research interests in economics at Stony Brook University, and writing with Obsidian.",
     file: "posts/welcome.md"
-  }
+  },
 ];
